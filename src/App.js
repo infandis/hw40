@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Nav from './Nav';
+import Conteiner from './Container';
 
+const headerMenu = {
+  nav: [
+    {'text': 'Головна', 'link' : '#'},
+    {'text': 'Пошук товарів', 'link' : '#'},
+    {'text': 'Кошик', 'link' : '#'},
+    {'text': 'Обліковий запис', 'link' : '#'},               
+  ]
+}
+  
+const navData = {
+  nav: [
+    {'text': 'Головна', 'link' : '#'},
+    {'text': 'Пошук товарів', 'link' : '#'},
+    {'text': 'Кошик', 'link' : '#'},
+    {'text': 'Обліковий запис', 'link' : '#'},
+  ]
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Header data={headerMenu}></Header>
+    <div className='content'>
+    <Nav data={navData}></Nav>
+    <Conteiner>контент</Conteiner>
+    
     </div>
+
+    </>
   );
 }
 
